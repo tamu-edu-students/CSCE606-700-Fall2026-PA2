@@ -19,6 +19,7 @@
         <td><%= movie.rating %></td>
         <td><%= movie.release_date %></td>
         <td><%= link_to "Edit", edit_movie_path(movie) %></td>
+        <td><%= button_to "Destroy :(", movie, method: :delete %></td>
       </tr>
     <% end %>
   </tbody>
