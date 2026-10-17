@@ -27,3 +27,46 @@ tbody tr:nth-child(even) {
 td {
     padding: 4px;
 }
+
+.field {
+    margin-bottom: 12px;
+}
+
+
+@keyframes rainbow {
+  0%   { background-color: red; }
+  25%  { background-color: orange; }
+  50%  { background-color: green; }
+  75%  { background-color: blue; }
+  100% { background-color: red; }
+}
+
+@keyframes rainbowtext {
+  0%   { color: black; }
+  25%  { color: black; }
+  50%  { color: white; }
+  75%  { color: white; }
+  100% { color: black; }
+}
+
+.submit {
+    animation: rainbow 4s linear infinite, rainbowtext 4s linear infinite;
+    border: none;
+    padding: 16px;
+    border-radius: 4px;
+}
+
+h1 {
+    animation: rainbow 2s linear infinite, rainbowtext 2s linear infinite;
+}
+
+.movie-details {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 8px 24px;
+    margin-bottom: 12px;
+}
+
+.movie-details .label {
+    font-weight: bold;
+}
