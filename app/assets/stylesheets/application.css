@@ -8,8 +8,8 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
-th.sorted {
-    font-weight: bold;
+th {
+    border-bottom: 2px solid black;
 }
 
 th.sorted.asc {
@@ -18,4 +18,12 @@ th.sorted.asc {
 
 th.sorted.desc {
     background-color: pink;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgb(231, 231, 231);
+}
+
+td {
+    padding: 4px;
 }
