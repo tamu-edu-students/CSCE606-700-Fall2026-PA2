@@ -4,9 +4,11 @@ class MoviesController < ApplicationController
   # GET /movies or /movies.json
   def index
     sort_options = ["title", "rating", "release_date"]
-    sort_option = sort_options.include?(params[:sort]) ? params[:sort] : sort_options[0]
-    @sort = sort_option
-    @movies = Movie.order(@sort)
+    @sort = sort_options.include?(params[:sort]) ? params[:sort] : sort_options[0]
+    direction_options = ["asc", "desc"]
+    @direction = direction_options.include?(params[:dir]) ? params[:dir] : direction_options[0]
+    
+    @movies = Movie.order(@sort => @direction)
   end
 
   # GET /movies/1 or /movies/1.json
