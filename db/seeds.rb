@@ -28,6 +28,4 @@ more_movies = [
     :release_date => '15-Jun-1960'}
 ]
 
-more_movies.each do |movie|
-  Movie.create!(movie)
-end
+Movie.upsert_all(more_movies, unique_by: :title)
