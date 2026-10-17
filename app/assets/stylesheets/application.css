@@ -8,3 +8,14 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+th.sorted {
+    font-weight: bold;
+}
+
+th.sorted.asc {
+    background-color: lightgreen;
+}
+
+th.sorted.desc {
+    background-color: pink;
+}
